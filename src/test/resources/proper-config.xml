@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<proper-config>
+	<workbook>
+		<filename>DLXContent.xls</filename>
+		<sheet>
+			<name>RESOURCE BUNDLE</name>
+			<keys>0</keys>
+			<startRow>5</startRow>
+			<language>
+				<column>2</column>
+				<propFile>ResourceBundle.properties</propFile>
+			</language>
+			<language>
+				<column>3</column>
+				<propFile>ResourceBundle_fr.properties</propFile>
+			</language>
+		</sheet>
+	</workbook>
+</proper-config>
