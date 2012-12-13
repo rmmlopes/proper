@@ -150,8 +150,12 @@ public class App
     			continue;
     		}
     		
+    		Cell c = r.getCell(keyColumn);
+    		if (c == null) {
+    			continue;
+    		}
     		String key = r.getCell(keyColumn).getStringCellValue();
-    		Cell c = r.getCell(valColumn);
+    		c = r.getCell(valColumn);
     		String val = c == null ? "" : c.getStringCellValue();
     		if (key.length() > 0) {
     			if (props.containsKey(key)) {
