@@ -144,7 +144,7 @@ public class App
     protected static Map<String, String> readXLS(Sheet sheet, int keyColumn, int valColumn, int startRow) {
     	Map<String, String> props = new HashMap<String, String>();
     	
-    	System.out.println("Reading XLS:");
+    	System.out.println("Reading XLS: " + sheet.getSheetName());
     	for (Row r : sheet) {
     		if (r.getRowNum() < startRow) {
     			continue;
@@ -154,9 +154,9 @@ public class App
     		if (c == null) {
     			continue;
     		}
-    		String key = r.getCell(keyColumn).getStringCellValue();
+    		String key = r.getCell(keyColumn).getStringCellValue().trim();
     		c = r.getCell(valColumn);
-    		String val = c == null ? "" : c.getStringCellValue();
+    		String val = c == null ? "" : c.getStringCellValue().trim();
     		if (key.length() > 0) {
     			if (props.containsKey(key)) {
     				if (props.get(key).equals(val)) {
