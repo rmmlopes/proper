@@ -7,6 +7,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Map;
 
+// Wrapper class to facilitate unit testing.  In the testing context properties are loaded from a 
+// resource stream while in the real context they are loaded from a file.  When loaded from a 
+// resource stream the store function is a NO OP.
 public class PropertiesMapLocal extends PropertiesMap {
 	private String fileName = null;
 
